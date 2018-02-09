@@ -15,9 +15,9 @@ use Runner\Pocache\Command\Clear;
 
 class FastdPocacheServiceProvider implements ServiceProviderInterface
 {
-
     /**
      * @param Container $container
+     *
      * @return mixed
      */
     public function register(Container $container)

@@ -15,7 +15,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Clear extends Command
 {
-
     public function configure()
     {
         $this->setName('opcache:clear');
@@ -23,10 +22,10 @@ class Clear extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $request = new Request('POST', config()->get('app_url') . '/flush_opcache');
+        $request = new Request('POST', config()->get('app_url').'/flush_opcache');
 
         $response = $request->send([
-            'token' => config()->get('opcache.flush_token')
+            'token' => config()->get('opcache.flush_token'),
         ]);
 
         if (Response::HTTP_OK === $response->getStatusCode()) {
