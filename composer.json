@@ -1,0 +1,20 @@
+{
+    "name": "runner/fastd-pocache",
+    "description": "opcache clear for fastd",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RunnerLee",
+            "email": "runnerleer@gmail.com"
+        }
+    ],
+    "require": {
+        "fastd/fastd": "~3.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Runner\\Pocache\\": "src"
+        }
+    }
+}
